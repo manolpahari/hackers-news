@@ -2,8 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 const StoryList = ({ stories }) => {
-    
-    console.log(stories);
+
     return (
         <div className="story-list">
            { stories.map(story => {
@@ -46,7 +45,7 @@ const StoryList = ({ stories }) => {
 
             .story-details {
                 font-size: 0.8rem;
-                font-wegiht: bold;
+                font-weight: bold;
             }
 
             .story-details span {
