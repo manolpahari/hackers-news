@@ -33,7 +33,7 @@ export class Story extends Component {
         }
 
         return (
-            <Layout>
+            <Layout backButton={true}>
                 <main>
                     <h1 className="story-title"><a href={story.url}>{story.title}</a></h1>
                     <div className="story-details">
