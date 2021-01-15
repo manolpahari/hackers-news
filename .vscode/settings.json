@@ -1,5 +1,7 @@
 {
     "emmet.includeLanguages": {
         "javascript": "javascriptreact"
-    }
+    },
+    "editor.fontFamily": "Operator Mono Medium, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontSize": 14
 }
