@@ -3,6 +3,7 @@ import fetch from 'isomorphic-fetch';
 import Link from 'next/link';
 import Error from 'next/error';
 import Layout from '../components/Layout';
+import CommentList from '../components/CommentList';
 
 export class Story extends Component {
 
@@ -27,11 +28,10 @@ export class Story extends Component {
     render() {
         
         const { story } = this.props;
-
         if(!story) {
             return <Error statusCode={503}/>
         }
-        
+
         return (
             <Layout>
                 <main>
@@ -41,6 +41,9 @@ export class Story extends Component {
                         <strong>{ story.comments_count } Comments </strong>
                         <strong>{ story.time_ago }</strong>
                     </div>
+                    { story.comments 
+                        ? <CommentList comments={story.comments}/> 
+                        : <div>No comments found! </div>}
                 </main>
 
                 <style jsx>{`
